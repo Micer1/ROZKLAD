@@ -247,7 +247,8 @@ input:checked + .slider:before { transform: translateX(22px); }
         <div class="glass-card fade-in">
             
             <div id="authSection">
-                <div id="googleBtnContainer"></div> <div id="userProfile" class="auth-badge hidden">
+                <div id="googleBtnContainer"></div>
+                <div id="userProfile" class="auth-badge hidden">
                     <img id="userAvatar" src="" alt="ava">
                     <div>
                         <div id="userName" style="font-size:12px; color:var(--text-muted);">Привіт,</div>
@@ -255,6 +256,7 @@ input:checked + .slider:before { transform: translateX(22px); }
                     </div>
                 </div>
             </div>
+
             <div class="section-label">Оберіть відділення</div>
             <div class="dept-grid">
                 <button class="dept-btn" onclick="selectDept('KI', this)">КІ</button>
@@ -352,17 +354,8 @@ input:checked + .slider:before { transform: translateX(22px); }
 const GOOGLE_CLIENT_ID = "748171676033-uvjugm73sfbf3o5fdd8tji5u90d077uu.apps.googleusercontent.com"; 
 
 // !!! ВСТАВ СЮДИ СВІЙ BASE64 КОД ШАБЛОНУ EXCEL !!!
-const templateBase64 = "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";
+const templateBase64 = ""; // <-- ВСТАВИТИ ТУТ (ВЕЛИКИЙ РЯДОК)
 
-
-// === КОНФІГУРАЦІЯ ЧАТІВ ===
-const deptLinks = {
-    "KI": "", 
-    "RZ": "", 
-    "ІТ": "https://chat.google.com/room/AAQA7vpySw0?cls=7" 
-};
-
-// === DATA ===
 const groupsDB = {
     "KI": {
         "91": { name: "Група 91 (КІ)", startYear: 2025, students: ["Аніщенко О.М.", "Бараусов Д.О.", "Баторик А.А.", "Галецький В.А.", "Гридньов М.А.", "Демченко О.В.", "Долженко Д.С.", "Капля К.О.", "Кравченко О.П.", "Курганський А.О.", "Ланний А.В.", "Майор А.Р.", "Максименко Д.О.", "Могилка М.Д.", "Морус А.А.", "Нікульшина П.О.", "Носуля О.Г.", "Олещенко Р.А.", "Орешкин А.В.", "Свєженцева В.М.", "Соловйов Г.В.", "Струнін Е.М.", "Тюкова Н.С.", "Шрамко А.І."] },
@@ -370,16 +363,14 @@ const groupsDB = {
         "86": { name: "Група 86 (КІ)", startYear: 2024, students: ["Аверченкова С.С.","Аніщенко Є.М.","Білик А.Д.","Богданов М.О.","Гоняєв Я.К.","Горелов Я.А.","Грек М.В.","Дмитрієв Г.О.","Довганенко В.О.","Жигай М.Д.","Калюжна П.Д.","Карпусенко Н.А.","Кібенко М.Р.","Корнєв Д.О.","Криковлюк К.С.","Махоня Є.Д.","Нечипоренко І.Ю.","Німченко Б.С.","Омельченко Р.В.","Пільгуй К.М.","Позивай Є.Є.","Руденко Г.В.","Циганков В.Г.","Чорний Н.Ю.","Щербань К.Д."] },
         "85": { name: "Група 85 (КІ)", startYear: 2024, students: ["Білей М.Д.","Бондарець М.Р.","Гаркуша Р.С.","Демченко В.А.","Євстратенко І.В.","Зайченко Я.П.","Кирпа Г.С.","Клименко С.О.","Колесов М.В.","Колісніченко І.Б.","Кривенко М.О.","Ледньов Є.О.","Масалова В.М.","Мурзін Т.Б.","Нетудихата Б.С.","Письменний Т.Р.","Піньковський А.Р.","Самарець І.Д.","Сидоренко О.С.","Скляренко Р.І.","Ткаченко В.М.","Третяк Г.П.","Шеремет Д.С.","Шкуренко П.К.","Шульга О.Г."] },
         "80": { name: "Група 80 (КІ)", startYear: 2023, students: ["Александров І.П.","Білявський Е.В.","Ведмеденко М.В.","Голофієвський В.А.","Грибенка К.І.","Данилов А.С.","Денисенко О.Є.","Дорошенко Д.С.","Дрикін Д.В.","Дяченко М.О.","Жигалкін Є.А.","Зєлєнін А.В.","Зенченко А.О.","Корсун М.О.","Кузьменко Б.С.","Лінський В.Д.","Лук’яненко С.О.","Нечта Н.О.","Пугачов Д.І.","Різниченко В.Є.","Ромащенко А.В.","Свита Д.С.","Семисал Г.О.","Стрельцов В.В.","Чирва В.І."] },
-        "79": { name: "Група 79 (КІ)", startYear: 2023, students: ["Айвазян Д.А.","Балюра І.С.","Балюра К.С.","Вахно Д.О.","Дяченко І.С.","Защолкін Р.О.","Кирпа Р.Р.","Копачова А.Е.","Кузеванов К.П.","Мирошник І.А.","Міхальов Д.В.","Носко М.М.","Носко Т.М.","Олійник А.О.","Рудський Р.В.","Сарданов А.Ю.","Сємєйко Є.М.","Сіпаков М.Д.","Скрицький В.О.","Сорокопуд В.О.","Сосніцький А.С.","Тихоненко Я.Ю.","Феоктістов І.Д.","Шевченко С.В.","Шереметьєв М.О."] } 
-    },
+        "79": { name: "Група 79 (КІ)", startYear: 2023, students: ["Айвазян Д.А.","Балюра І.С.","Балюра К.С.","Вахно Д.О.","Дяченко І.С.","Защолкін Р.О.","Кирпа Р.Р.","Копачова А.Е.","Кузеванов К.П.","Мирошник І.А.","Міхальов Д.В.","Носко М.М.","Носко Т.М.","Олійник А.О.","Рудський Р.В.","Сарданов А.Ю.","Сємєйко Є.М.","Сіпаков М.Д.","Скрицький В.О.","Сорокопуд В.О.","Сосніцький А.С.","Тихоненко Я.Ю.","Феоктістов І.Д.","Шевченко С.В.","Шереметьєв М.О."] } },
     "RZ": {
         "89": { name: "Група 89 (РЗ)", startYear: 2025, students: ["Алексєєв Д.С.", "Баранов І.В.", "Бєлінський Є.В.", "Болсун І.С.", "Брусенко М.Є.", "Каневський А.К.", "Коваленко А.А.", "Ковальова Н.В.", "Коротков Н.В.", "Кохан Д.В.", "Кучер І.Г.", "Лісуненко В.А.", "Мохій О.О.", "Мунтян Д.Г.", "Нефедов Є.О.", "Ніколаєв Д.О.", "Остроухов О.А.", "Пархоменко А.С.", "Перетяка Є.І.", "Плахтій І.О.", "Ревін А.І.", "Савченко Д.А.", "Сухонос А.М.", "Тихон К.А.", "Черкас В.С.", "Шаблико А.О.", "Юхимець Я.О."] },
         "88": { name: "Група 88 (РЗ)", startYear: 2025, students: ["Бесклуб Є.Є.", "Бєляєв Д.Ю.", "Вертела Т.А.", "Воронич Д.Є.", "Воронцов В.І.", "Добряк Д.А.", "Жук В.Е.", "Загорський М.М.", "Качмала О.С.", "Коваль Я.А.", "Кононов Б.Д.", "Корнієнко В.О.", "Кущевський Д.К.", "Маркович М.С.", "Мироненко Д.С.", "Мироненко С.С.", "Попков О.О.", "Продан Т.Г.", "Сайілханов А.Н.", "Сироветник П.О.", "Скомороха Н.С.", "Соловйов О.М.", "Стасюк Б.С.", "Стасюк М.С.", "Ткаченко Д.В.", "Трінько М.А.", "Хандак Є.О.", "Шнирьов Є.М."] },
         "84": { name: "Група 84 (РЗ)", startYear: 2024, students: ["Беловол В.А.", "Головань Д.О.", "Гончаров Є.М.", "Григоренко Є.Ю.", "Животов І.В.", "Завгородній В.О.", "Зарайський П.Р.", "Іжакевич К.М.", "Калистий Я.Ю.", "Карпенко Д.О.", "Кім К.О.", "Лебедєв О.О.", "Лелюх І.В.", "Лісничий О.А.", "Нежнов Д.С."] },
         "83": { name: "Група 83 (РЗ)", startYear: 2024, students: ["Байбуз І.О.", "Білан В.В.", "Бужинський Д.В.", "Вишневський І.К.", "Господинько О.О.", "Гречко А.П.", "Доннік В.О.", "Желтоухов Р.О.", "Захарова А.Д.", "Камнєв І.Д.", "Літвінов А.С.", "Луценко Д.В.", "Нестеров О.І.", "Панюта Р.Р.", "Портних В.О.", "Рибницький О.В.", "Савчук М.А.", "Севастьянов Д.В.", "Стінський В.В.", "Суіма Р.О.", "Ткаченко І.А.", "Троцький Д.Д.", "Федорченко Я.М.", "Шаловинський К.А."] },
         "78": { name: "Група 78 (РЗ)", startYear: 2023, students: ["Баздирєв М.С.", "Бойко В.О.", "Бутенко Д.Д.", "Водолаженко В.О.", "Громницький М.Т.", "Іванчиков І.А.", "Кишинський І.А.", "Кір М.В.", "Кормич І.Г.", "Кудінкін М.В.", "Курмач М.С.", "Лета Т.І.", "Лисенко Т.Ю.", "Міщенко Т.О.", "Назаренко В.Д.", "Перепелиця В.Д.", "Радченко А.І.", "Савицький Р.А.", "Сєдой А.О.", "Усенко М.В."] },
-        "77": { name: "Група 77 (РЗ)", startYear: 2023, students: ["Верещак Д.О.", "Василенко М.І.", "Власенко О.С.", "Волошин Є.В.", "Гурба В.О.", "Дорохов З.Д.", "Єлисавенко М.Д.", "Зарембо І.В.", "Івашко В.О.", "Канделя П.О.", "Кукушкін І.О.", "Северін Д.Д.", "Терещенко В.В.", "Шавадзе Б.А."] } 
-    },
+        "77": { name: "Група 77 (РЗ)", startYear: 2023, students: ["Верещак Д.О.", "Василенко М.І.", "Власенко О.С.", "Волошин Є.В.", "Гурба В.О.", "Дорохов З.Д.", "Єлисавенко М.Д.", "Зарембо І.В.", "Івашко В.О.", "Канделя П.О.", "Кукушкін І.О.", "Северін Д.Д.", "Терещенко В.В.", "Шавадзе Б.А."] } },
     "ІТ": {
         "87": { name: "Група 87 (ІТ)", startYear: 2025, students: ["Білокопитов О.С.","Бондюк М.С.","Брикалін О.С.","Бриндін О.О.","Глазичева Г.В.","Горбенко О.С.","Динисюк М.М.","Догонов Д.В.","Догонов І.В.","Єгоров Т.Д.","Карпіков А.А.","Ковалдін Д.О.","Мирошниченко Є.С.","Міняйло Б.Р.","Москаленко В.П.","Новак М.В.","Павлюк П.О.","Паскалов Д.О.","Пересунько А.О.","Петренко П.К.","Подобєдов А.К.","Порхун О.А.","Самойленко В.І.","Таран М.С.","Тертишник О.О.","Тимошенко О.А.","Торянський М.С.","Шевцов Д.В."] },
         "82": { name: "Група 82 (ІТ)", startYear: 2024, students: ["Білик А.А.","Будник Б.О.","Дудкін М.С.","Євдошенко М.О.","Єршов Л.М.","Журіков М.С.","Карповець І.А.","Козар Р.Г.","Коломоєць Н.О.","Коротаєв Л.В.","Косяченко А.В.","Лємягов Д.М.","Лисичний В.А.","Литвин Д.І.","Лук’яненко В.М.","Мартинов І.О.","Мисик В.А.","Новосьолова В.А.","Парушкін Д.О.","Петрук К.Г.","Семенець Р.А.","Сушко М.М.","Терещенко М.А.","Цирулик А.С.","Шеремєтов М.І.","Юрчук Б.М.","Якубенко Д.А."] },
@@ -387,12 +378,15 @@ const groupsDB = {
         "76": { name: "Група 76 (ІТ)", startYear: 2023, students: ["Басалаєв Д.В.","Валентіров А.О.","Гладкий Є.Р.","Гребенюк Н.П.","Димарьов К.О.","Єфімов О.К.","Кагала І.А.","Кононенко Р.Ю.","Корольков Б.О.","Костюченко О.С.","Кудін М.О.","Кузнецов В.І.","Ластовін М.В.","Листопад Н.В.","Мальований М.В.","Марініч А.І.","Олефіров Я.Д.","Отінов М.Д.","Панкратов Д.М.","Сівцов М.О.","Скоробогатько М.Д.","Смольянін М.С.","Стрижко М.С.","Трофимов О.К.","Шаклін О.О.","Шпак Д.Е."] },
         "75": { name: "Група 75 (ІТ)", startYear: 2023, students: ["Бурлаков Б.В.","Годунов Д.О.","Долгов І.О.","Доценко Д.Р.","Кряшко Я.Я.","Лисаков А.А.","Лігачов Є.А.","Матвієвич С.О.","Мізинчук Д.Д.","Мокряк А.С.","Мотрич І.Є.","Овчаренко Д.О.","Півторацький О.С.","Румянцева К.О.","Семиліт І.Є.","Сівірюк Я.А.","Удовіков Н.І.","Усенко М.Ю.","Черкашин О.С.","Шуляк К.Д."] },
         "70": { name: "Група 70 (ІТ)", startYear: 2022, students: ["Бережний М.А.","Ващук К.М.","Гетьман О.С.","Деменко Я.В.","Журавель Д.А.","Залогін П.К.","Іванов Г.А.","Кисель Д.Я.","Коваленко М.Д.","Курєгян А.В.","Лебедєв М.О.","Настобурка С.І.","Павлов М.В.","Подорванов Д.В.","Прибиток Д.В.","Прудченко О.Д.","Ражда М.В.","Сошенков М.С.","Строчка Д.Р.","Сундарцев К.С.","Тимощенко Я.Р.","Ткаченко Д.В.","Шаповалов І.Е.","Щербина М.О.","Яловенко М.О."] },
-        "69": { name: "Група 69 (ІТ)", startYear: 2022, students: ["Богданова А.Д.","Буданов Д.І.","Гонтар Д.Д.","Денисов В.Р.","Дусик В.О.","Кайстря А.С.","Коваленко Д.О.","Кряж Б.С.","Кулак А.О.","Марченко Н.В.","Михайленко М.С.","Перекопський В.М.","Потягайло Д.Є.","Соломена Є.В.","Солопов Д.Є.","Сушко І.М.","Тимошенко Я.В.","Фоменко В.В.","Швайдак І.К.","Якименко Т.В."] } 
-    },
+        "69": { name: "Група 69 (ІТ)", startYear: 2022, students: ["Богданова А.Д.","Буданов Д.І.","Гонтар Д.Д.","Денисов В.Р.","Дусик В.О.","Кайстря А.С.","Коваленко Д.О.","Кряж Б.С.","Кулак А.О.","Марченко Н.В.","Михайленко М.С.","Перекопський В.М.","Потягайло Д.Є.","Соломена Є.В.","Солопов Д.Є.","Сушко І.М.","Тимошенко Я.В.","Фоменко В.В.","Швайдак І.К.","Якименко Т.В."] } },
 };
 
+// === ОНОВЛЕНА СТРУКТУРА ПРЕДМЕТІВ (Вкладена) ===
 const curriculumDB = {
-   1: {
+    // ================== ВІДДІЛЕННЯ КІ ==================
+    "KI": {
+        1: {
+            // Впиши сюди предмети для 1 курсу КІ
        "Українська мова": "Каліста Ю.В./Прощенко І.І.",
        "Історія України": "Домніна Г.С.",
        "Українська література": "Сесь О.В./Прощенко І.І.",
@@ -404,42 +398,109 @@ const curriculumDB = {
        "Фізична культура": "Філіппов Д.В.",
        "Інформатика": "Житченко І.М.",
        "Географія": "Шеремет Н.М.",
-       "Іноземна мова": "Токарєва О.В."},
-   2: {
-       "Комп'ютерні технології": "Гончаров О.М.",
        "Іноземна мова": "Токарєва О.В.",
-       "Фізика і астрономія": "Карпова Л.М./Валявський В.В.",
-       "Технології М2 ": "Олійник О.Ю./Васильченко І.І.",
-       "Теорія кіл": "Чорний О.А.",
+        },
+        2: {
+            // Предмети для 2 курсу КІ
+            
+        },
+        3: {
+            // Предмети для 3 курсу КІ
+        },
+        4: {
+            // Предмети для 4 курсу КІ
+        }
+    },
+
+    // ================== ВІДДІЛЕННЯ РЗ ==================
+    "RZ": {
+        1: {
+            // Предмети для 1 курсу РЗ
+       "Українська мова": "Каліста Ю.В./Прощенко І.І.",
+       "Історія України": "Домніна Г.С.",
+       "Українська література": "Сесь О.В./Прощенко І.І.",
+       "Громадянська освіта": "Юшин П.Б.",
+       "Математика": "Коваль І.А.",
+       "Хімія": "Кондратова О.О.",
+       "Біологія і екологія": "Кондратова О.О.",
+       "Фізика і астрономія": "Махинько С.В./Валявський В.В.",
        "Фізична культура": "Філіппов Д.В.",
        "Інформатика": "Житченко І.М.",
-       "Технології М1 ": "Андрєєв В.О.",
-       "Українська література": "Прощенко І.М.",
-       "Біологія і екологія": "Шайтанова О.М.",
-       "Математика Алгебра": "Коваль І.А.",
-       "Історія України": "Домніна Г.С.",
-       "Українська мова": "Прощенко І.М./Каліста Ю.В.",
-       "Технології М3": "Олійник О.Ю./Васильченко І.І.",
-       "Вища математика": "Гончаров О.М.",
-       "Комп'ютерна логіка": "Вороніна С.В.",
-       "Основи алгоритмів": "Грабовчак Т.В."},
-   3:{ 
-       "Архітектура комп'ютерів": "Дворніченко А.С.",
-       "Програмування": "Грабовчак Т.В.",
-       "Фізичне виховання": "Філіппов Д.В.",
-       "Теорія ймовірностей": "Гончаров О.М.",
-       "Безпека життєдіяльності": "Білик Т.І.",
-       "Іноземна мова": "Хочинська О.С./Гребенюк А.А.",
-       "Виховна година": "Грабовчак Т.В."},
-   4:{ 
-       "Пошир. радіохвиль та АФП": "Валявський В.В.",
-       "Фізичне виховання": "Шапошникова О.І.",
-       "Іноземна мова": "Токарєва О.В./Гребенюк А.А.",
-       "Ел. вимірювання": "Медведєва Л.С.",
-       "Цифрова обробка": "Чорний О.А.",
-       "Пристрої прий. та передачі": "Медведєва Л.С.",
-       "Конструювання і тех.": "Кондратов О.В.",
-       "Комп'ютерна практика": "Житченко І.М./Грабовчак Т.В."},
+       "Географія": "Шеремет Н.М.",
+       "Іноземна мова": "Токарєва О.В.",
+        },
+        2: {
+            // Предмети для 2 курсу РЗ
+        },
+        3: {
+            // Предмети для 3 курсу РЗ
+        },
+        4: {
+            // Предмети для 4 курсу РЗ
+        }
+    },
+
+    // ================== ВІДДІЛЕННЯ ІТ ==================
+    "ІТ":  {
+        1: {
+            // Предмети для 1 курсу ІТ
+            "Українська мова": "Каліста Ю.В./Прощенко І.І.",
+            "Історія України": "Домніна Г.С.",
+            "Українська література": "Сесь О.В./Прощенко І.І.",
+            "Громадянська освіта": "Юшин П.Б.",
+            "Математика": "Коваль І.А.",
+            "Хімія": "Кондратова О.О.",
+            "Біологія і екологія": "Кондратова О.О.",
+            "Фізика і астрономія": "Махинько С.В./Валявський В.В.",
+            "Фізична культура": "Філіппов Д.В.",
+            "Інформатика": "Житченко І.М.",
+            "Географія": "Шеремет Н.М.",
+            "Іноземна мова": "Токарєва О.В.",
+        },
+        2: {
+            // Предмети для 2 курсу ІТ
+            "Вища математика": "Гончаров О.М.",
+            "Фізична культура": "Шапошникова О.І./Філіппов Д.В.",
+            "Українська мова": "Прощенко І.М./Каліста Ю.В.",
+            "Українська література": "Сесь Ю.В.",
+            "Іноземна мова": "Токарева О.В./Хочинська О.С.",
+            "Основи програмування": "Жук В.Ю.",
+            "Історія України": "Юшин П.Б.",
+            "Фізика і астрономія": "Карпова Л.М.",
+            "Технології (МЗ Комп'ютерне проєктування)": "Шевченко В.І./Олійник О.Ю./Васильченко І.І.",
+            "Основи теорії кіл": "Веклич А.В.",
+            "Математика (Алгебра, начальний аналіз та геометрія)": "Ковальчук-Жук І.О.",
+            "Введення в спеціальність": "Сапко Ю.О.",
+            "Радіоавтоматика та електроживлення радіотехнічних пристроїв": "Дишук Л.Г."
+        },
+        3: {
+            // Предмети для 3 курсу ІТ
+            "Поширення радіохвиль та антенно-фідерні пристрої": "Валявський В.В.",
+            "Фізичне виховання": "Шапошникова О.І.",
+            "Іноземна мова (за проф. спрям.)": "Токарєва О.В./Гребенюк А.А.",
+            "Електричні вимірювання та контроль електронних апаратів": "Медведєва Л.С.",
+            "Цифр. обр. інф. сигн.": "Чорний О.А.",
+            "Пристр. прийому та передачі": "Медведєва Л.С.",
+            "Конструювання і техн.": "Кондратов О.В."
+        },
+        4: {
+            // Предмети для 4 курсу ІТ
+            "Пошир. радіохвиль та АФП": "Валявський В.В.",
+            "Фізичне виховання": "Шапошникова О.І.",
+            "Іноземна мова": "Токарєва О.В./Гребенюк А.А.",
+            "Ел. вимірювання": "Медведєва Л.С.",
+            "Цифрова обробка": "Чорний О.А.",
+            "Пристрої прий. та передачі": "Медведєва Л.С.",
+            "Конструювання і тех.": "Кондратов О.В.",
+            "Комп'ютерна практика": "Житченко І.М./Грабовчак Т.В.",
+        }
+    }
+};
+// === ПОСИЛАННЯ НА ЧАТИ (Заповни їх) ===
+const deptLinks = {
+    "KI": "", // Посилання для КІ
+    "RZ": "", // Посилання для РЗ
+    "ІТ": ""  // Посилання для ІТ
 };
 
 const reasons = ["","нем.світл","нем.інт.","захворів","сім. обст.","без пов.прич.","інд.","хворіє","у лікаря","на конкурсі","техн. пробл."];
@@ -450,67 +511,9 @@ let currentGroup = null;
 let currentCourse = 1;
 let currentTeachers = {};
 let uploadedWorkbookBuffer = null;
-let rowTeacherOptions = {};
+let rowTeacherOptions = {}; 
 
-// === GOOGLE AUTH LOGIC ===
-
-window.onload = function() {
-    // 1. Ініціалізація Google Client
-    google.accounts.id.initialize({
-        client_id: GOOGLE_CLIENT_ID,
-        callback: handleCredentialResponse
-    });
-
-    // 2. Рендеринг кнопки (якщо не залогінений)
-    const savedEmail = localStorage.getItem("starosta_email");
-    if(savedEmail) {
-        showUserProfile(savedEmail, localStorage.getItem("starosta_name"), localStorage.getItem("starosta_pic"));
-    } else {
-        google.accounts.id.renderButton(
-            document.getElementById("googleBtnContainer"),
-            { theme: "filled_blue", size: "large", shape: "pill", width: 250 } 
-        );
-    }
-}
-
-function handleCredentialResponse(response) {
-    // 3. Розшифровка токена
-    const responsePayload = decodeJwtResponse(response.credential);
-
-    const email = responsePayload.email;
-    const name = responsePayload.name;
-    const pic = responsePayload.picture;
-
-    // 4. Збереження
-    localStorage.setItem("starosta_email", email);
-    localStorage.setItem("starosta_name", name);
-    localStorage.setItem("starosta_pic", pic);
-
-    // 5. Оновлення UI
-    showUserProfile(email, name, pic);
-    showToast(`Привіт, ${name}! Авторизація успішна.`);
-}
-
-function showUserProfile(email, name, pic) {
-    document.getElementById("googleBtnContainer").style.display = "none";
-    const profile = document.getElementById("userProfile");
-    profile.classList.remove("hidden");
-    document.getElementById("userEmail").innerText = email;
-    document.getElementById("userName").innerText = name;
-    if(pic) document.getElementById("userAvatar").src = pic;
-}
-
-// Декодер JWT (щоб не підключати важкі бібліотеки)
-function decodeJwtResponse(token) {
-    var base64Url = token.split('.')[1];
-    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
-    return JSON.parse(jsonPayload);
-}
-
-// === STANDARD LOGIC ===
+// === LOGIC ===
 
 function selectDept(dept, btn) {
     currentDept = dept;
@@ -548,13 +551,22 @@ function enterApp() {
     
     currentGroup = groupsDB[currentDept][groupKey];
     currentCourse = calculateCourse(currentGroup.startYear);
-    currentTeachers = curriculumDB[currentCourse] || {};
+    
+    // === ОНОВЛЕНА ЛОГІКА ВИБОРУ ПРЕДМЕТІВ ===
+    // Спочатку шукаємо за відділенням, потім за курсом
+    if (curriculumDB[currentDept] && curriculumDB[currentDept][currentCourse]) {
+        currentTeachers = curriculumDB[currentDept][currentCourse];
+    } else {
+        currentTeachers = {};
+        console.log(`Увага: Не знайдено предметів для ${currentDept} курс ${currentCourse}`);
+    }
     
     document.getElementById('loginScreen').classList.add('hidden');
     document.getElementById('appScreen').classList.remove('hidden');
     document.getElementById('headerTitle').innerText = currentGroup.name;
     document.getElementById('headerSubtitle').innerText = `${currentCourse} курс • ${Object.keys(currentTeachers).length} предметів`;
 
+    // Init Date
     const d = new Date();
     document.getElementById('dayInput').value = d.getDate();
     document.getElementById('monthInput').value = d.getMonth();
@@ -603,8 +615,8 @@ function autoTeacher(i) {
             const options = rawTeachers.split('/').map(t => t.trim());
             rowTeacherOptions[i] = options;
             
-            teachEl.value = options[0];
-            swapBtn.classList.remove('hidden');
+            teachEl.value = options[0]; 
+            swapBtn.classList.remove('hidden'); 
             showToast(`Знайдено ${options.length} викладачів. Тисніть стрілки для зміни.`);
         } else {
             teachEl.value = rawTeachers;
@@ -692,10 +704,12 @@ function handleFileUpload(input) {
     const reader = new FileReader();
     reader.onload = function(e) {
         uploadedWorkbookBuffer = e.target.result;
+        
         document.getElementById('uploadBtn').classList.add('active');
         document.getElementById('uploadBtnText').innerText = "Файл завантажено! (Скинути)";
         document.getElementById('uploadBtn').setAttribute('onclick', 'resetFile()');
         document.getElementById('fileStatus').innerHTML = `Файл: ${file.name}<br>Режим: <b style="color:var(--accent)">Доповнення (Права сторона)</b>`;
+        
         showToast("📂 Файл прийнято! Заповнюємо праву сторону.");
     };
     reader.readAsArrayBuffer(file);
@@ -704,10 +718,12 @@ function handleFileUpload(input) {
 function resetFile() {
     uploadedWorkbookBuffer = null;
     document.getElementById('fileUpload').value = "";
+    
     document.getElementById('uploadBtn').classList.remove('active');
     document.getElementById('uploadBtnText').innerText = "Маю файл (Заповнити Праву)";
     document.getElementById('uploadBtn').setAttribute('onclick', "document.getElementById('fileUpload').click()");
     document.getElementById('fileStatus').innerHTML = "Режим: <b>Новий файл (Ліва сторона)</b>";
+    
     showToast("↺ Режим скинуто на створення нового файлу.");
 }
 
@@ -743,6 +759,7 @@ async function generateExcel() {
       };
 
       const wb = new ExcelJS.Workbook();
+      
       let buffer;
       if (isExistingFile) {
           buffer = uploadedWorkbookBuffer;
@@ -798,6 +815,7 @@ async function generateExcel() {
           } else {
               nameCell.value = s;
           }
+
           setCellStyle(nameCell, false);
 
           let hours = 0;
@@ -816,17 +834,20 @@ async function generateExcel() {
           totalCell.value = hours;
           setCellStyle(totalCell, true);
           totalCell.alignment = { horizontal: "center", vertical: "middle" };
+          
           row++;
         }
       });
 
       const outBuf = await wb.xlsx.writeBuffer();
+      
       let fileName = `raport_${groupNameOnly}_${day}_${monthStr}`;
       if (side === 'right') fileName += "_Completed"; 
       else fileName += "_Left";
       
       saveAs(new Blob([outBuf]), fileName + ".xlsx");
       showToast("✅ Файл успішно збережено!");
+      
       if (side === 'right') resetFile();
 
   } catch (e) {
@@ -863,19 +884,74 @@ function openChat() {
         const urlObj = new URL(link);
         
         if (userEmail) {
-            urlObj.searchParams.set("authuser", userEmail);
-        } else {
-            urlObj.searchParams.set("authuser", "0"); 
+            // Для Google Chat/Meet іноді додають параметр authuser=email або схожі
+            // Але оскільки посилання статичне, ми просто відкриваємо його.
+            // Можна додати логіку "автозаповнення", якщо URL це підтримує
         }
+        
+        window.open(link, '_blank');
+        showToast(`💬 Відкриваю чат: ${currentDept}`);
 
-        window.open(urlObj.toString(), "_blank");
-        showToast(`🚀 Відкриваю чат відділення ${currentDept}...`);
     } catch (e) {
-        alert("Некоректне посилання на чат!");
+        window.open(link, '_blank');
     }
 }
+
+// === GOOGLE AUTH HANDLER ===
+function handleCredentialResponse(response) {
+    try {
+        // Decode JWT
+        const base64Url = response.credential.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+
+        const payload = JSON.parse(jsonPayload);
+        
+        // Save to LocalStorage
+        localStorage.setItem("starosta_email", payload.email);
+        localStorage.setItem("starosta_name", payload.name);
+        localStorage.setItem("starosta_picture", payload.picture);
+
+        updateUI(payload.name, payload.email, payload.picture);
+        showToast(`✅ Вітаю, ${payload.given_name}!`);
+
+    } catch (e) {
+        console.error(e);
+        showToast("❌ Помилка авторизації");
+    }
+}
+
+function updateUI(name, email, picture) {
+    document.getElementById('googleBtnContainer').classList.add('hidden');
+    const badge = document.getElementById('userProfile');
+    badge.classList.remove('hidden');
+    
+    document.getElementById('userName').innerText = `Привіт, ${name}`;
+    document.getElementById('userEmail').innerText = email;
+    document.getElementById('userAvatar').src = picture;
+}
+
+window.onload = function () {
+    const savedEmail = localStorage.getItem("starosta_email");
+    if (savedEmail) {
+        updateUI(
+            localStorage.getItem("starosta_name"), 
+            savedEmail, 
+            localStorage.getItem("starosta_picture")
+        );
+    } else {
+        google.accounts.id.initialize({
+            client_id: GOOGLE_CLIENT_ID,
+            callback: handleCredentialResponse
+        });
+        google.accounts.id.renderButton(
+            document.getElementById("googleBtnContainer"),
+            { theme: "outline", size: "large", type: "standard", shape: "pill", text: "signin_with", width: "250" } 
+        );
+    }
+};
 </script>
 </body>
 </html>
-
-
